@@ -1,5 +1,11 @@
 ﻿################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
-
 *.env
+*.sln
+*.pyproj
+.gitignore
+.gitattributes
+/.vs/
+/__pycache__/
+/venv/
