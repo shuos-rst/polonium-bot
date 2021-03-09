@@ -2,12 +2,15 @@ import os
 import discord
     #https://discordpy.readthedocs.io/en/latest/index.html#
 from dotenv import load_dotenv #this is a thing for the discord token. 
-    #https://realpython.com/how-to-make-a-discord-bot-python/#
-    #https://pypi.org/project/python-dotenv/#
+    #https://github.com/theskumar/python-dotenv#file-format#
+from dice import dice_roll, xdn, dn
+#info about the async/await syntax:
+    #https://realpython.com/async-io-python/#
 
+load_dotenv() #loads all the files in from the .env file
+TOKEN = os.getenv('DISCORD_TOKEN') #gets the token from the .env file
 
-load_dotenv()
-TOKEN = os.getenv('DISCORD_TOKEN')
+keyword = '.' #this is the keyword for commands
 
 client = discord.Client()
 
@@ -19,7 +22,10 @@ async def on_ready():
 async def on_message(message):
     if message.author == client.user:
         return
-    if message.content.startswith('$hello'):
+    if message.content.startswith(keyword + 'hello'):
         await message.channel.send('Hello!')
-
+        return
+    if message.content.startswith(keyword + 'roll'):
+        input = message.content.lstrip('.roll ')
+        await message.channel.send(dice_roll(input)) 
 client.run(TOKEN)
