@@ -7,7 +7,7 @@ from dotenv import load_dotenv #this is a thing for the discord token.
 
 
 load_dotenv()
-TOKEN = os.getenv('DISCORD TOKEN')
+TOKEN = os.getenv('DISCORD_TOKEN')
 
 client = discord.Client()
 
@@ -17,9 +17,9 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    if message.author == client.user():
+    if message.author == client.user:
         return
     if message.content.startswith('$hello'):
         await message.channel.send('Hello!')
 
-client.run(TOKEN) #it gets the token from the .env file which we interface with using dotenv
+client.run(TOKEN)
