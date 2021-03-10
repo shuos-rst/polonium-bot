@@ -2,6 +2,7 @@ import os
 import discord #https://discordpy.readthedocs.io/en/latest/index.html#
 from dotenv import load_dotenv #this is a thing for the discord token. https://github.com/theskumar/python-dotenv#file-format#
 from dice import dice_roll, xdn, dn
+from randimage import randimage
 
 
 #info about the async/await syntax:
@@ -13,6 +14,8 @@ TOKEN = os.getenv('DISCORD_TOKEN') #gets the token from the .env file
 keyword = '.' #this is the keyword for commands
 
 client = discord.Client()
+
+woops = randimage('woop_images.csv')
 
 @client.event
 async def on_ready():
@@ -48,15 +51,18 @@ async def on_message(message):
         await message.channel.send(dice_roll(diceInput, ''))
 
     #.gme command -- returns a message about gamestop stock
-    elif message.content.startswith((keyword + 'gme')):
+    elif message.content.startswith(keyword + 'gme'):
         await(message.channel.send("\U0001F680 To the moon \U0001F680"))
 
     #.rblx command -- returns a message about roblox stock
-    elif message.content.startswith((keyword + 'rblx')):
+    elif message.content.startswith(keyword + 'rblx'):
         await(message.channel.send("\U0001F680 stonks only go up \U0001F680"))
 
     #.miku command -- returns a link to the miku chug jug song
-    elif message.content.startswith((keyword + 'miku')):
+    elif message.content.startswith(keyword + 'miku'):
         await(message.channel.send("https://youtu.be/GRk6u033YXk"))
+
+    elif message.content.startswith(keyword + 'woop'):
+        await(message.channel.send(woops.rand()))
 
 client.run(TOKEN)
