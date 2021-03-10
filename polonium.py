@@ -26,6 +26,6 @@ async def on_message(message):
         await message.channel.send('Hello!')
         return
     if message.content.startswith(keyword + 'roll'):
-        input = message.content.lstrip('.roll ')
-        await message.channel.send(dice_roll(input)) 
+        diceInput = message.content.lstrip('.roll ')
+        await message.channel.send(dice_roll(diceInput)) 
 client.run(TOKEN)
