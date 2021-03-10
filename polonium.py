@@ -23,12 +23,32 @@ async def on_message(message):
     if message.author == client.user:
         return
     #TODO is there a better way to handle keyword -> code then this structure? I need to check my 332S book
+    #.help command -- COMING SOON -- returns a list of commands
+    elif message.content.startswith(keyword + 'help'):
+        diceInput = message.content.lstrip('.help ')
+        await message.channel.send('coming soon')
+   
+    #.hello command -- returns "Hello!"
     elif message.content.startswith(keyword + 'hello'):
         await message.channel.send('Hello!')
-        return
+
+    #.rollad -- standard dice roller, with advantage
+    elif message.content.startswith(keyword + 'rollad'):
+        diceInput = message.content.lstrip('.rollad ')
+        await message.channel.send(dice_roll(diceInput, 'ad'))
+
+    #.rollda -- standard dice roller, with disadvantage
+    elif message.content.startswith(keyword + 'rollda'):
+        diceInput = message.content.lstrip('.rollda ')
+        await message.channel.send(dice_roll(diceInput, 'da'))
+
+    #.roll command -- standard dice roller
     elif message.content.startswith(keyword + 'roll'):
         diceInput = message.content.lstrip('.roll ')
-        await message.channel.send(dice_roll(diceInput))
+        await message.channel.send(dice_roll(diceInput, ''))
+
+    #.gme command -- returns a message about gamestop stock
     elif message.content.startswith(keyword + 'gme'):
         await(message.channel.send("\U0001F680 To the moon \U0001F680"))
+
 client.run(TOKEN)

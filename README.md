@@ -6,6 +6,8 @@ keyword | description
 --------|---------
 .hello |
 .roll xdn | where x is the number of dice, and n is the sides of the dice (1d6 for example)
+.rollad xdn | roll with advantage
+.rollda xdn | roll with disadvantage
 .gme |
 
 more coming soon!
