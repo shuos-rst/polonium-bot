@@ -2,4 +2,5 @@
 2) .help
 3) .rancid
 4) look through nadeko bot for feature ideas
-5)
+5) .steal (steals an emoji from another server)
+6) stonk price chek
