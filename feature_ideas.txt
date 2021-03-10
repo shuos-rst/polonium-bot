@@ -1,3 +1,4 @@
+0) .miku (random miku image? miku emote?)
 1) coding advantage and disadvantage (.rollad, .rollda), modifiers
 2) .help
 3) .rancid
