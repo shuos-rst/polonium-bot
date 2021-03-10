@@ -22,7 +22,7 @@ def dice_roll(discord_input):
             return "the vibes are simply rancid"
         n = int(diceInput[2])
         if (not diceInput[0]):
-            print(dn(n))
+            return (dn(n))
         else:
             x = int(diceInput[0])
             return (xdn(x,n))
