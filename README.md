@@ -16,3 +16,5 @@ to get polonium to work, you need to add a .env file to configure it. create a f
 DISCORD_TOKEN=
 ```
 [shuos on twitter](https://twitter.com/home)
+
+![image](https://user-images.githubusercontent.com/54552425/110570541-ab1f7e00-811b-11eb-91a3-d917f59b5788.png)
