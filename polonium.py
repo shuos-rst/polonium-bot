@@ -48,7 +48,15 @@ async def on_message(message):
         await message.channel.send(dice_roll(diceInput, ''))
 
     #.gme command -- returns a message about gamestop stock
-    elif message.content.startswith(keyword + 'gme'):
+    elif message.content.startswith((keyword + 'gme')):
         await(message.channel.send("\U0001F680 To the moon \U0001F680"))
+
+    #.rblx command -- returns a message about roblox stock
+    elif message.content.startswith((keyword + 'rblx')):
+        await(message.channel.send("\U0001F680 stonks only go up \U0001F680"))
+
+    #.miku command -- returns a link to the miku chug jug song
+    elif message.content.startswith((keyword + 'miku')):
+        await(message.channel.send("https://youtu.be/GRk6u033YXk"))
 
 client.run(TOKEN)

@@ -9,6 +9,8 @@ keyword | description
 .rollad xdn | roll with advantage
 .rollda xdn | roll with disadvantage
 .gme |
+.rblx | 
+.miku | returns a link to miku chug jug
 
 more coming soon!
 
