@@ -2,10 +2,10 @@
 a low-key discord bot built using discord.py, numpy, and python-dotenv
 
 ## current commands
-.hello
-.roll xdn 
-     where x is the number of dice, and n is the sides of the dice (1d6 for example)
-.gme
+* .hello
+* .roll xdn 
+*      where x is the number of dice, and n is the sides of the dice (1d6 for example)
+* .gme
 
 more coming soon!
 
