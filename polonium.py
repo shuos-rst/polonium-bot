@@ -29,6 +29,6 @@ async def on_message(message):
     elif message.content.startswith(keyword + 'roll'):
         diceInput = message.content.lstrip('.roll ')
         await message.channel.send(dice_roll(diceInput))
-    elif message.content.starswith(keyword + 'gme'):
+    elif message.content.startswith(keyword + 'gme'):
         await(message.channel.send("\U0001F680 To the moon \U0001F680"))
 client.run(TOKEN)
