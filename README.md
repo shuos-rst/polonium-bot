@@ -8,6 +8,7 @@ keyword | description
 .roll xdn | where x is the number of dice, and n is the sides of the dice (1d6 for example)
 .rollad xdn | roll with advantage
 .rollda xdn | roll with disadvantage
+.woop | sends a random image of wooper
 .gme |
 .rblx | 
 .miku | returns a link to miku chug jug
