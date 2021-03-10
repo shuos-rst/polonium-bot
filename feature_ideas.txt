@@ -1,0 +1,5 @@
+1) coding advantage and disadvantage (.rollad, .rollda)
+2) .help
+3) .rancid
+4) look through nadeko bot for feature ideas
+5)
