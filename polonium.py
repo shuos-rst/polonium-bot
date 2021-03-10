@@ -1,9 +1,9 @@
 import os
-import discord
-    #https://discordpy.readthedocs.io/en/latest/index.html#
-from dotenv import load_dotenv #this is a thing for the discord token. 
-    #https://github.com/theskumar/python-dotenv#file-format#
+import discord #https://discordpy.readthedocs.io/en/latest/index.html#
+from dotenv import load_dotenv #this is a thing for the discord token. https://github.com/theskumar/python-dotenv#file-format#
 from dice import dice_roll, xdn, dn
+
+
 #info about the async/await syntax:
     #https://realpython.com/async-io-python/#
 
@@ -22,6 +22,7 @@ async def on_ready():
 async def on_message(message):
     if message.author == client.user:
         return
+    #TODO is there a better way to handle keyword -> code then this structure? I need to check my 332S book
     if message.content.startswith(keyword + 'hello'):
         await message.channel.send('Hello!')
         return

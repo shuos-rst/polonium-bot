@@ -8,11 +8,11 @@ class InputError(Exception):
     pass
 
 def dn(n): #a die with n sides
-    return random.randrange(1, n+1)
+    return np.random.randr(1, n+1)
 
 def xdn(x, n): #x dice with n sides
     if x < 1 or n < 1:
-        return ""#Some error message about no negative/0 dice/roll
+        raise InvalidError()
     dice = np.random.randint(1,n+1,x)
     total = np.sum(dice)
     # for i in range(x):
