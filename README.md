@@ -4,7 +4,7 @@ a low-key discord bot built in python :smile:
 ## current commands
 keyword | description
 --------|---------
-.help | coming soon
+.help | prints a list of commands and their descriptions
 .hello | say hello to polonium!
 .roll xdn | where x is the number of dice, and n is the sides of the dice (1d6 for example)
 .rollad xdn | roll with advantage
