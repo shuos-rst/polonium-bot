@@ -5,8 +5,6 @@ import os
 
 class help(AbstractCommand):
 
-
-
     def __init__(self, command_prompt_pointer):
         self.cmnd_prmpt = command_prompt_pointer
 
