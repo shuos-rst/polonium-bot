@@ -1,7 +1,7 @@
 import os
 import discord #https://discordpy.readthedocs.io/en/latest/index.html#
 from dotenv import load_dotenv #https://github.com/theskumar/python-dotenv#file-format#
-from dice import roll, rollad, rollda
+from dice import roll
 from randimage import randimage
 from config import config
 from command_prompt import command_prompt
@@ -16,13 +16,13 @@ KEYWORD= os.getenv('KEYWORD') #sets the keyword for commands
 if (TOKEN == ''):
     config()
 
-
+#this is using the command pattern.
 cmnd = command_prompt() #creates a command prompt
 
 #registering commands to the command prompt
-cmnd.add('roll', roll())
-cmnd.add('rollad', rollad())
-cmnd.add('rollda', rollda())
+cmnd.add('roll', roll(''))
+cmnd.add('rollad', roll('ad'))
+cmnd.add('rollda', roll('da'))
 cmnd.add('woop', randimage('image_csvs/woop_images.csv'))
 cmnd.add('miku', randimage('image_csvs/miku_images.csv'))
 cmnd.add('hello', callresponse('hello! :)'))
@@ -49,7 +49,7 @@ async def on_message(message):
 
         #this gets rid of the elifs and makes it OOP
     elif message.content.startswith(KEYWORD):
-        messageInput = message.content.lstrip(KEYWORD)
-        await message.channel.send(cmnd.find_and_execute(messageInput))
+        messageInput = message.content.lstrip(KEYWORD) #strips the KEYWORD prefix from commands
+        await message.channel.send(cmnd.find_and_execute(messageInput)) #finds and executes a command from the command prompt
 
 client.run(TOKEN)

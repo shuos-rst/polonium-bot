@@ -1,15 +1,15 @@
 #.woop command. goal of this is to send a random image of wooper
+from AbstractCommand import AbstractCommand
 
 import csv
 
 
-class randimage():
+class randimage(AbstractCommand):
 
     images = set()
 
     def __init__(self, file): #constructor
         self.images = set()
-
 
         with open(file, newline='') as file_input: #this bit of code should read in lines from the csv of images
             file_reader = csv.reader(file_input)
