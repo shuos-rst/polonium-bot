@@ -8,7 +8,7 @@ class roll(AbstractCommand):
     def __init__(self, command_specific_setup):
         self.type = command_specific_setup
 
-    def execute(self, command_input): #TODO redo how this is written to use only 1 string
+    def execute(self, command_input):
             diceInput = command_input.partition("d") #returns a tuple with index 0 being the x, index 1 being d, index 2 being the n
             if not re.search(r'^\d*?d\d+$',command_input):
                 return "the vibes are simply rancid"

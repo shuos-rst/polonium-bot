@@ -18,5 +18,8 @@ class command_prompt:
 
     def find_and_execute(self, name):
         command_tuple = name.partition(' ')
-        #TODO institute a "we didn't find that message"
-        return self.registry[command_tuple[0]].execute(command_tuple[2])
+        try:
+            result = self.registry[command_tuple[0]].execute(command_tuple[2])
+        except:
+            return('huh?') #message for when the command isn't recognized
+        return(result)
