@@ -1,19 +1,16 @@
 import os
 import discord #https://discordpy.readthedocs.io/en/latest/index.html#
-from dotenv import load_dotenv, find_dotenv #https://github.com/theskumar/python-dotenv#file-format#
+from dotenv import load_dotenv #https://github.com/theskumar/python-dotenv#file-format#
 from dice import dice_roll, xdn, dn
 from randimage import randimage
 from config import config
 
-#info about the async/await syntax:
-    #https://realpython.com/async-io-python/#
 
+#loading the .env
 load_dotenv() #loads the .env file (environment file)
-
-
 TOKEN = os.getenv('TOKEN') #gets the token from the environment file
 KEYWORD= os.getenv('KEYWORD') #sets the keyword for commands
-
+#config the .env on first load
 if (TOKEN == ''):
     config()
 
@@ -24,6 +21,7 @@ client = discord.Client()
 woops = randimage('image_csvs/woop_images.csv')
 mikus = randimage('image_csvs/miku_images.csv')
 
+#info about the async/await syntax: https://realpython.com/async-io-python/#
 
 #commands
 @client.event
@@ -35,6 +33,20 @@ async def on_message(message):
     if message.author == client.user:
         return
     #TODO is there a better way to handle keyword -> code then this structure? I need to check my 332S book
+        #command pattern -- #https://www.notion.so/shuos/Command-Pattern-595ac1a1e9c842b0a0cdff68e948acfa#
+
+        #ok so. here's how its gonna go down
+        #have a command prompt class, with a dictionary with keys being the command, and values being a pointer to the instance of each command
+        #have an abstract base class that all command.py files are derived from.
+        #have all the command.py files be a class with a constructor and an execute method that returns a string
+        #register all command objects to the command prompt like in lab5
+            #cp.addCommand("ls", new LSCommand(sfs));# from lab5
+
+        #when a command is entered, we first check if it's got the KEYWORD and not sent by us.
+        #then we look it up in the dictionary and execute the command from that pointer.
+
+        #this gets rid of the elifs and makes it OOP
+
 
     #TODO implement .help
     #.help command -- COMING SOON -- returns a list of commands
