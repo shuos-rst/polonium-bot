@@ -7,8 +7,6 @@ from config import config
 
 #info about the async/await syntax:
     #https://realpython.com/async-io-python/#
-#ODE4OTYzOTgwNjU0NDc3MzUy.YEftpA.tZ4lXaC_YireaxDIV9zSo3ZM2q0
-
 
 load_dotenv() #loads the .env file (environment file)
 
