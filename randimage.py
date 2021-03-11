@@ -17,7 +17,8 @@ class randimage():
                 self.images.add(str(row)) #we store the images in a set because .pop() from a set is random access
 
 
-    def rand(self):
+
+    def execute(self, command_input):
         result = self.images.pop()
         result = result.replace("'","")
         result = result.strip("[]")
