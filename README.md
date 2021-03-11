@@ -11,7 +11,7 @@ keyword | description
 .woop | sends a random image of the pokemon wooper
 .gme | ask polonium their opinion on gamestop stock
 .rblx | ask polonium their opinion on roblox stock
-.miku | returns a link to miku chug jug
+.miku | sends a random image of miku!
 
 more coming soon!
 

@@ -16,6 +16,7 @@ keyword = '.' #this is the keyword for commands
 client = discord.Client()
 
 woops = randimage('woop_images.csv')
+mikus = randimage('miku_images.csv')
 
 @client.event
 async def on_ready():
@@ -26,6 +27,8 @@ async def on_message(message):
     if message.author == client.user:
         return
     #TODO is there a better way to handle keyword -> code then this structure? I need to check my 332S book
+
+    #TODO implement .help
     #.help command -- COMING SOON -- returns a list of commands
     elif message.content.startswith(keyword + 'help'):
         diceInput = message.content.lstrip('.help ')
@@ -52,7 +55,7 @@ async def on_message(message):
 
     #.gme command -- returns a message about gamestop stock
     elif message.content.startswith(keyword + 'gme'):
-        await(message.channel.send("\U0001F680 To the moon \U0001F680"))
+        await(message.channel.send("\U0001F680 to the moon \U0001F680"))
 
     #.rblx command -- returns a message about roblox stock
     elif message.content.startswith(keyword + 'rblx'):
@@ -60,7 +63,7 @@ async def on_message(message):
 
     #.miku command -- returns a link to the miku chug jug song
     elif message.content.startswith(keyword + 'miku'):
-        await(message.channel.send("https://youtu.be/GRk6u033YXk"))
+        await(message.channel.send(mikus.rand()))
 
     elif message.content.startswith(keyword + 'woop'):
         await(message.channel.send(woops.rand()))
