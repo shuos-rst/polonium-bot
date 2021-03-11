@@ -1,12 +1,12 @@
 import os
 import discord #https://discordpy.readthedocs.io/en/latest/index.html#
 from dotenv import load_dotenv #https://github.com/theskumar/python-dotenv#file-format#
-from dice import roll
-from randimage import randimage
+from commands.dice import roll
+from commands.randimage import randimage
 from config import config
 from command_prompt import command_prompt
-from callresponse import callresponse
-from helpcommand import help
+from commands.callresponse import callresponse
+from commands.helpcommand import help
 
 
 #loading the .env

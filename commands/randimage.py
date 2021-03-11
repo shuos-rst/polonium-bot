@@ -1,5 +1,5 @@
 #.woop command. goal of this is to send a random image of wooper
-from AbstractCommand import AbstractCommand
+from commands.AbstractCommand import AbstractCommand
 
 import csv
 

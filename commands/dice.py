@@ -1,6 +1,6 @@
 import numpy as np
 import re
-from AbstractCommand import AbstractCommand
+from commands.AbstractCommand import AbstractCommand
 
 class roll(AbstractCommand):
     type = str()

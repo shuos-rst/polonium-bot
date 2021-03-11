@@ -1,5 +1,5 @@
 #help command
-from AbstractCommand import AbstractCommand
+from commands.AbstractCommand import AbstractCommand
 from command_prompt import command_prompt
 import os
 

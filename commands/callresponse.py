@@ -1,4 +1,4 @@
-from AbstractCommand import AbstractCommand
+from commands.AbstractCommand import AbstractCommand
 
 #class that allows us to easily add a call and response style command
 
