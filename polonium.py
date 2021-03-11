@@ -33,7 +33,7 @@ async def on_message(message):
    
     #.hello command -- returns "Hello!"
     elif message.content.startswith(keyword + 'hello'):
-        await message.channel.send('Hello!')
+        await message.channel.send('hello! :)')
 
     #.rollad -- standard dice roller, with advantage
     elif message.content.startswith(keyword + 'rollad'):

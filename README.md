@@ -4,13 +4,13 @@ a low-key discord bot built using discord.py, numpy, and python-dotenv
 ## current commands
 keyword | description
 --------|---------
-.hello |
+.hello | say hello to polonium!
 .roll xdn | where x is the number of dice, and n is the sides of the dice (1d6 for example)
 .rollad xdn | roll with advantage
 .rollda xdn | roll with disadvantage
-.woop | sends a random image of wooper
-.gme |
-.rblx | 
+.woop | sends a random image of the pokemon wooper
+.gme | ask polonium their opinion on gamestop stock
+.rblx | ask polonium their opinion on roblox stock
 .miku | returns a link to miku chug jug
 
 more coming soon!
