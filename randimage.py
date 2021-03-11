@@ -7,8 +7,10 @@ class randimage():
 
     images = set()
 
-    def __init__(self, file): #constructor                
+    def __init__(self, file): #constructor
         self.images = set()
+
+
         with open(file, newline='') as file_input: #this bit of code should read in lines from the csv of images
             file_reader = csv.reader(file_input)
             for row in file_reader:

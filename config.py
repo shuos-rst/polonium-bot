@@ -8,12 +8,12 @@ def config():
     envpath = find_dotenv()
     if envpath == '':
         newf = open(".env","w+") #creates the new file
-        newf.write("# .env\n") #might need to include a newline here
-
+        newf.write("# .env\nTOKEN=\nKEYWORD=") #might need to include a newline here
+        newf.close()
     load_dotenv()
 
     #prompt user input for the token and prefix char
-    print("welcome to config! this automatically runs on startup, but whenever you want to change settings, shut down the bot and run config.py \n\nto set up polonium, generate a token from the bot page on the discord developer portal, \nand think up a char that you want to use in front of each command (for example, . or ! or &)")
+    print("welcome to config! this automatically runs on startup, but whenever you want to change settings, delete the .env file and run the bot again \n\nto set up polonium, generate a token from the bot page on the discord developer portal, \nand think up a char that you want to use in front of each command (for example, . or ! or &)")
 
     token = input("enter token:")
     newkey = input("enter prefix char:")
@@ -29,5 +29,3 @@ def config():
     print("configured with:")
     print("token set to: " + os.getenv('TOKEN'))
     print("prefix char set to: " + os.getenv('KEYWORD'))
-
-config()

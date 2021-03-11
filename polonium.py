@@ -7,10 +7,8 @@ from config import config
 
 #info about the async/await syntax:
     #https://realpython.com/async-io-python/#
+#ODE4OTYzOTgwNjU0NDc3MzUy.YEftpA.tZ4lXaC_YireaxDIV9zSo3ZM2q0
 
-
-if (find_dotenv() == ''): #if no .env is found, run config()
-    config()
 
 load_dotenv() #loads the .env file (environment file)
 
@@ -18,12 +16,15 @@ load_dotenv() #loads the .env file (environment file)
 TOKEN = os.getenv('TOKEN') #gets the token from the environment file
 KEYWORD= os.getenv('KEYWORD') #sets the keyword for commands
 
+if (TOKEN == ''):
+    config()
+
 #establish connection to discord
 client = discord.Client()
 
 #create randimage() objects
-woops = randimage('woop_images.csv')
-mikus = randimage('miku_images.csv')
+woops = randimage('image_csvs/woop_images.csv')
+mikus = randimage('image_csvs/miku_images.csv')
 
 
 #commands

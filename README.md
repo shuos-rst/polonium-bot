@@ -21,6 +21,6 @@ run polonium.py in the command prompt.
 
 the first time the bot is run, it will prompt you to enter a token (from the discord developer portal) and a prefix char (like ! or . or & -- the character that goes in front of each command).
 
-to change the token or prefix char after the first time it's run, run config.py (the first time the bot is run, it does this on it's own)
+to change the token or prefix char after the first time it's run, delete the .env file and run the bot again
 ***
 [shuos on twitter](https://twitter.com/shuos_)
