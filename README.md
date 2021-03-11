@@ -15,10 +15,8 @@ keyword | description
 
 more coming soon!
 
-## configuring for a server
-to get polonium to work, you need to add a .env file to configure it. create a file named ".env". the contents of the file should be the below code, with the token from the discord developer portal pasted directly after DISCORD_TOKEN=
-```python
-# .env
-DISCORD_TOKEN=
-```
+## using polonium
+to run the bot, run polonium.py in the command prompt. the first time the bot is run, it asks for a token (from the discord developer portal) and a prefix char (like ! or . or & -- the character that goes in front of each command)
+to change the token or prefix char after the first time it's run, run config.py (the first time the bot is run, it does this on it's own)
+***
 [shuos on twitter](https://twitter.com/home)
