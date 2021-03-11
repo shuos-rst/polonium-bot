@@ -17,6 +17,8 @@ keyword | description
 more coming soon!
 
 ## using polonium
+make sure you have the packages from requirements.txt installed
+
 run polonium.py in the command prompt.
 
 the first time the bot is run, it will prompt you to enter a token (from the discord developer portal) and a prefix char (like ! or . or & -- the character that goes in front of each command).
