@@ -1,7 +1,0 @@
-0) .miku (random miku image? miku emote?)
-1) coding advantage and disadvantage (.rollad, .rollda), modifiers
-2) .help
-3) .rancid
-4) look through nadeko bot for feature ideas
-5) .steal (steals an emoji from another server)
-6) stonk price chek
