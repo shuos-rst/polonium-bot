@@ -13,6 +13,7 @@ class callresponse(AbstractCommand):
     def execute(self, command_input):
         return self.response
 
+#TODO determine a way to save custom commands so that they don't go away on restart
 class addresponse(AbstractCommand):
 
     def __init__(self, command_prompt_instance):
@@ -33,7 +34,7 @@ class deleteresponse(AbstractCommand):
 
     def execute(self, command_input):
         tobedeleted = command_input.lstrip(self.cmnd_prmpt.KEYWORD)
-        if (self.cmnd_prmpt.desc_reg[tobedeleted] == self.cmnd_prmpt.registry[tobedeleted].execute('')):
+        if (self.cmnd_prmpt.desc_reg[tobedeleted] == self.cmnd_prmpt.registry[tobedeleted].execute('')): #the way to make sure it's a user created command is check to see if the output equals the description (because both are the same *only* with user-created ones)
             self.cmnd_prmpt.registry.pop(tobedeleted)
             return('command deleted')
         else:

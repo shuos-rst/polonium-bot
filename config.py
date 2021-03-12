@@ -17,11 +17,13 @@ def config():
 
     token = input("enter token:")
     newkey = input("enter prefix char:")
+    wolfram = input("enter wolfram alpha api key (OPTIONAL, just hit enter if you don't want to use this feature): ")
 
 
     #set keys/value pairs to new values
     set_key(find_dotenv(),'TOKEN',token)
     set_key(find_dotenv(),'KEYWORD',newkey)
+    set_key(find_dotenv(),'WOLFRAM',wolfram)
 
     #reload the environment with the new values
     load_dotenv(find_dotenv(),stream=None,verbose=False,override=True)
@@ -29,3 +31,4 @@ def config():
     print("configured with:")
     print("token set to: " + os.getenv('TOKEN'))
     print("prefix char set to: " + os.getenv('KEYWORD'))
+    print("wolfram api key set to: " + os.getenv('WOLFRAM'))
