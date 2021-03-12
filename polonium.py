@@ -33,7 +33,7 @@ cmnd.add('miku', randimage('image_csvs/miku_images.csv'), 'sends a random image 
 cmnd.add('hello', callresponse('hello! :)'),'say hello to polonium!')
 cmnd.add('gme', callresponse("\U0001F680 to the moon \U0001F680"), "ask polonium about it's opinions about gamestop stock")
 cmnd.add('rblx', callresponse("\U0001F680 stonks only go up \U0001F680"), "ask polonium about it's opinions about roblox stock")
-cmnd.add('ar', addresponse(cmnd), 'add a custom response to the bot! format: ' + KEYWORD + "addresponse <command> <response> where everything after the space is the response")
+cmnd.add('ar', addresponse(cmnd), 'add a custom response to the bot! format: ' + KEYWORD + "ar <command> <response> where everything after the space is the response")
 cmnd.add('dr', deleteresponse(cmnd), 'delete a custom response. format: ' + KEYWORD + 'dr <' + KEYWORD + 'command>')
 cmnd.add('help', help(cmnd), 'prints a list of commands and their descriptions')
 
