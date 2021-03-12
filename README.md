@@ -13,6 +13,8 @@ keyword | description
 .miku | sends a random image of hatsune miku
 .gme | ask polonium their opinion on gamestop stock
 .rblx | ask polonium their opinion on roblox stock
+.ar | add a custom response. format: .ar <command>
+.dr | delete a custom response. format: .dr <command>
 
 more coming soon!
 

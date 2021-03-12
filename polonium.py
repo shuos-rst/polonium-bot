@@ -5,7 +5,7 @@ from commands.dice import roll
 from commands.randimage import randimage
 from config import config
 from command_prompt import command_prompt
-from commands.callresponse import callresponse
+from commands.callresponse import callresponse, addresponse, deleteresponse
 from commands.helpcommand import help
 
 
@@ -18,7 +18,7 @@ if (TOKEN == ''):
     config()
 
 #this is using the command pattern.
-cmnd = command_prompt() #creates a command prompt
+cmnd = command_prompt(KEYWORD) #creates a command prompt
 
 #registering commands to the command prompt
 cmnd.add('roll', roll(''), 'where x is the number of dice, and n is the sides of the dice (1d6 for example)')
@@ -29,6 +29,8 @@ cmnd.add('miku', randimage('image_csvs/miku_images.csv'), 'sends a random image 
 cmnd.add('hello', callresponse('hello! :)'),'say hello to polonium!')
 cmnd.add('rblx', callresponse("\U0001F680 stonks only go up \U0001F680"), "ask polonium about it's opinions about gamestop stock")
 cmnd.add('gme', callresponse("\U0001F680 to the moon \U0001F680"), "ask polonium about it's opinions about roblox stock")
+cmnd.add('ar', addresponse(cmnd), 'add a custom response to the bot! format: ' + KEYWORD + "addresponse <command> <response> where everything after the space is the response")
+cmnd.add('dr', deleteresponse(cmnd), 'delete a custom response. format: ' + KEYWORD + 'dr <' + KEYWORD + 'command>')
 cmnd.add('help', help(cmnd), 'prints a list of commands and their descriptions')
 
 

@@ -13,5 +13,5 @@ class help(AbstractCommand):
         registry = self.cmnd_prmpt.access_desc_registry()
         commandlist = 'command list:\n'
         for command in registry:
-            commandlist = commandlist + os.getenv("KEYWORD") + command + "\t" + registry[command] + "\n"
+            commandlist = commandlist + self.cmnd_prmpt.KEYWORD + command + "\t" + registry[command] + "\n"
         return(commandlist)
