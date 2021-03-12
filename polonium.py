@@ -8,6 +8,10 @@ from command_prompt import command_prompt
 from commands.callresponse import callresponse, addresponse, deleteresponse
 from commands.helpcommand import help
 
+#i wonder if how you would have different versions of the bot for different servers would be having different initializations of the command prompt, and all it's objects.
+#the token and shit is all just kinda the gateway to discord, the command_prompt() object is what is handling everything
+#theres prob a better way to have the code that actually talks between discord and local computer.
+
 
 #loading the .env
 load_dotenv() #loads the .env file (environment file)
