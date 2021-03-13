@@ -33,7 +33,7 @@ class deleteresponse(AbstractCommand):
 
     def execute(self, command_input):
         tobedeleted = command_input.lstrip(self.cmnd_prmpt.KEYWORD)
-        if (self.cmnd_prmpt.desc_reg[tobedeleted] == tobedeleted:
+        if (self.cmnd_prmpt.desc_reg[tobedeleted] == tobedeleted):
             self.cmnd_prmpt.registry.pop(tobedeleted)
             return('command deleted')
         else:
