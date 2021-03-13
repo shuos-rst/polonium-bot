@@ -21,7 +21,7 @@ class addresponse(AbstractCommand):
     def execute(self, command_input):
         newcmnd = command_input.partition(' ')
         if (self.cmnd_prmpt.find_and_execute(str(newcmnd[0])) == 'huh?'):
-            self.cmnd_prmpt.add(newcmnd[0], callresponse(newcmnd[2]), newcmnd[2])
+            self.cmnd_prmpt.add(newcmnd[0], callresponse(newcmnd[2]), newcmnd[0])
             return('command ' + self.cmnd_prmpt.KEYWORD + newcmnd[0] +" added!")
         else:
             return('that command name is already taken, try again')
@@ -33,7 +33,7 @@ class deleteresponse(AbstractCommand):
 
     def execute(self, command_input):
         tobedeleted = command_input.lstrip(self.cmnd_prmpt.KEYWORD)
-        if (self.cmnd_prmpt.desc_reg[tobedeleted] == self.cmnd_prmpt.registry[tobedeleted].execute('')):
+        if (self.cmnd_prmpt.desc_reg[tobedeleted] == tobedeleted:
             self.cmnd_prmpt.registry.pop(tobedeleted)
             return('command deleted')
         else:
