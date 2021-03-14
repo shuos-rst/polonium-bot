@@ -28,8 +28,8 @@ cmnd = command_prompt(KEYWORD) #creates a command prompt
 cmnd.add('roll', roll(''), 'where x is the number of dice, and n is the sides of the dice (1d6 for example)')
 cmnd.add('rollad', roll('ad'), 'roll with advantage')
 cmnd.add('rollda', roll('da'), 'roll with disadvantage')
-cmnd.add('woop', randimage(os.path.join("image_csvs", "woop_images.csv")), 'sends a random image of wooper') #the os.path.join() is necessary because linux uses / and windows uses \
-cmnd.add('miku', randimage(os.path.join("image_csvs", "miku_images.csv")), 'sends a random image of hatsune miku')
+cmnd.add('woop', randimage(os.path.abspath(os.path.join("image_csvs", "woop_images.csv"))), 'sends a random image of wooper') #the os.path.join() is necessary because linux uses / and windows uses \
+cmnd.add('miku', randimage(os.path.abspath(os.path.join("image_csvs", "miku_images.csv"))), 'sends a random image of hatsune miku')
 cmnd.add('hello', callresponse('hello! :)'),'say hello to polonium!')
 cmnd.add('gme', callresponse("\U0001F680 to the moon \U0001F680"), "ask polonium about it's opinions about gamestop stock")
 cmnd.add('rblx', callresponse("\U0001F680 stonks only go up \U0001F680"), "ask polonium about it's opinions about roblox stock")
