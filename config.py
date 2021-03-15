@@ -5,6 +5,7 @@ from dotenv import load_dotenv, set_key, find_dotenv
 
 
 def config():
+
     envpath = find_dotenv()
     if envpath == '':
         newf = open(".env","w+") #creates the new file

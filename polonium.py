@@ -13,13 +13,18 @@ from commands.helpcommand import help
 #theres prob a better way to have the code that actually talks between discord and local computer.
 
 
+#TODO determine how to save custom responses.
+    #csv of command, response string.
+    #load from that csv every time the bot executes
+
 #loading the .env
 load_dotenv() #loads the .env file (environment file)
 TOKEN = os.getenv('TOKEN') #gets the token from the environment file
-KEYWORD= os.getenv('KEYWORD') #sets the keyword for commands
+KEYWORD = os.getenv('KEYWORD') #sets the keyword for commands
 #config the .env on first load
-if (TOKEN == ''):
+if TOKEN is None:
     config()
+
 
 #this is using the command pattern.
 cmnd = command_prompt(KEYWORD) #creates a command prompt
@@ -33,8 +38,8 @@ cmnd.add('miku', randimage(os.path.join("image_csvs", "miku_images.csv")), 'send
 cmnd.add('hello', callresponse('hello! :)'),'say hello to polonium!')
 cmnd.add('gme', callresponse("\U0001F680 to the moon \U0001F680"), "ask polonium about it's opinions about gamestop stock")
 cmnd.add('rblx', callresponse("\U0001F680 stonks only go up \U0001F680"), "ask polonium about it's opinions about roblox stock")
-cmnd.add('ar', addresponse(cmnd), 'add a custom response to the bot! format: ' + KEYWORD + "ar <command> <response> where everything after the space is the response")
-cmnd.add('dr', deleteresponse(cmnd), 'delete a custom response. format: ' + KEYWORD + 'dr <' + KEYWORD + 'command>')
+cmnd.add('ar', addresponse(cmnd), 'add a custom response to the bot! format: ar <command> <response> where everything after the space is the response')
+cmnd.add('dr', deleteresponse(cmnd), 'delete a custom response. format: dr <command>')
 cmnd.add('help', help(cmnd), 'prints a list of commands and their descriptions')
 
 
