@@ -16,6 +16,7 @@ from commands.helpcommand import help
 #TODO determine how to save custom responses.
     #csv of command, response string.
     #load from that csv every time the bot executes
+    #where to do this in the structure of things?
 
 #loading the .env
 load_dotenv() #loads the .env file (environment file)
