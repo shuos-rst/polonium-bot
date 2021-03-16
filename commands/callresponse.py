@@ -54,7 +54,7 @@ def saveCommand(name, command):
 
 #figure out a way to load all the files from a directory, not just one command
 #DO THIS WITH THE CSV LIBRARY
-def loadCommand(cmnd_prmpt)
+def loadCommand(cmnd_prmpt):
     try:
 
         f = fileinput.input(files=('TODO get all the files here'))
