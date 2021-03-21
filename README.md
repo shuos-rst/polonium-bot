@@ -34,4 +34,4 @@ the first time the bot is run, it will prompt you to enter the token that you co
 
 to change the token or prefix char after the first time it's run, delete the file named '.env' and run the bot again
 ***
-[shuos on twitter](https://twitter.com/shuos_)
+[syrtis on twitter](https://twitter.com/syrtis_)
