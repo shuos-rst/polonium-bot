@@ -23,7 +23,7 @@ class addresponse(AbstractCommand):
     def execute(self, command_input):
         newcmnd = command_input.partition(' ')
         if (self.cmnd_prmpt.find_and_execute(str(newcmnd[0])) == 'huh?'):
-            if (len(newcmnd[0]) > 15):
+            if (len(newcmnd[0]) > 15): #we need to make sure command names are < 15 chars, because otherwise you can break .help by adding command names that bring the length of the .help message >2000 characters
                 return ("commands with a length of more than 15 characters cannot be added.")
             self.cmnd_prmpt.add(newcmnd[0], callresponse(newcmnd[2]), newcmnd[0])
 #TODO finish implementing saveCommand            saveCommand(newcmnd[0], newcmnd[2])
