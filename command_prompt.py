@@ -15,6 +15,10 @@ class command_prompt:
         self.registry[name] = command
         self.desc_reg[name] = description
 
+    def delete(self, name):
+        del self.desc_reg[name]
+        del self.registry[name]
+
     def access_desc_registry(self):
         return self.desc_reg
 
