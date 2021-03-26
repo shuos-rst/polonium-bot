@@ -1,6 +1,5 @@
 # polonium-bot
 a low-key discord bot built in python :smile:
-[add polonium to your server](https://discord.com/api/oauth2/authorize?client_id=818963980654477352&permissions=8&scope=bot)
 
 ## current commands
 keyword | description
