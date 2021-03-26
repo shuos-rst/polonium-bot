@@ -5,7 +5,7 @@ from commands.dice import roll
 from commands.randimage import randimage
 from config import config
 from command_prompt import command_prompt
-from commands.callresponse import callresponse, addresponse, deleteresponse
+from commands.callresponse import callresponse, addResponse, deleteResponse, editResponse
 from commands.helpcommand import help
 
 #i wonder if how you would have different versions of the bot for different servers would be having different initializations of the command prompt, and all it's objects.
@@ -39,8 +39,9 @@ cmnd.add('miku', randimage(os.path.join("image_csvs", "miku_images.csv")), 'send
 cmnd.add('hello', callresponse('hello! :)'),'say hello to polonium!')
 cmnd.add('gme', callresponse("\U0001F680 to the moon \U0001F680"), "ask polonium about it's opinions about gamestop stock")
 cmnd.add('rblx', callresponse("\U0001F680 stonks only go up \U0001F680"), "ask polonium about it's opinions about roblox stock")
-cmnd.add('ar', addresponse(cmnd), 'add a custom response to the bot! format: ar <command> <response> where everything after the space is the response')
-cmnd.add('dr', deleteresponse(cmnd), 'delete a custom response. format: dr <command>')
+cmnd.add('ar', addResponse(cmnd), 'add a custom response to the bot! format: ar <command> <response> where everything after the space is the response')
+cmnd.add('er', editResponse(cmnd), 'edit an already existing custom command! format: er <command> <new_response>')
+cmnd.add('dr', deleteResponse(cmnd), 'delete a custom response. format: dr <command>')
 cmnd.add('help', help(cmnd), 'prints a list of commands and their descriptions')
 
 

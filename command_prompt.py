@@ -19,6 +19,9 @@ class command_prompt:
         del self.desc_reg[name]
         del self.registry[name]
 
+    def edit(self, name, newCommand):
+        self.registry[name] = newCommand
+
     def access_desc_registry(self):
         return self.desc_reg
 
