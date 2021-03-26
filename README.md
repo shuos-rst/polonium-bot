@@ -15,7 +15,7 @@ keyword | description
 .rblx | ask polonium their opinion on roblox stock
 .ar | add a custom response. format: .ar \<command name\> \<command text\>
 .er | edit a custom resopnse. format: .er \<command name\> \<new command text\>
-.dr | delete a custom response. format: .dr <command name>
+.dr | delete a custom response. format: .dr \<command name\>
 
 more coming soon!
 
