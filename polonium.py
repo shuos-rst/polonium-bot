@@ -43,6 +43,7 @@ cmnd.add('ar', addResponse(cmnd), 'add a custom response to the bot! format: ar 
 cmnd.add('er', editResponse(cmnd), 'edit an already existing custom command! format: er <command> <new_response>')
 cmnd.add('dr', deleteResponse(cmnd), 'delete a custom response. format: dr <command>')
 cmnd.add('help', help(cmnd), 'prints a list of commands and their descriptions')
+cmnd.add('Custom Commands:',None,'')
 
 
 #establish connection to discord

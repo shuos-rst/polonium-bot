@@ -11,7 +11,9 @@ class help(AbstractCommand):
     def execute(self, command_input):
         #loop through the registry and print all keys
         registry = self.cmnd_prmpt.access_desc_registry()
-        commandlist = 'command list:\n'
+        commandlist = '```command list:\n'
         for command in registry:
-            commandlist = commandlist + self.cmnd_prmpt.KEYWORD + command + "\t" + registry[command] + "\n"
-        return(commandlist)
+            commandlist +=  self.cmnd_prmpt.KEYWORD + command + "\t" + registry[command] + "\n" \
+                if command != 'Custom Commands:' else '\n' + command + "\n"
+        commandlist += '```'
+        return commandlist
