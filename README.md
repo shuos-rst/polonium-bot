@@ -30,7 +30,7 @@ go to the OAuth2 tab, select "bot" from the scopes pane, and "administrator" fro
 
 run polonium.py in the command prompt.
 
-the first time the bot is run, it will prompt you to enter the token that you copied earlier and a prefix char (like ! or . or & -- the character that goes in front of each command).
+the first time the bot is run, it will prompt you to enter the token that you copied earlier and a prefix char (like ! or . or & -- the character that goes in front of each command). It might give you an error along the lines of `'NoneType' object has no attribute 'strip()'` -- just run polonium.py again.
 
 to change the token or prefix char after the first time it's run, delete the file named '.env' and run the bot again
 ***
